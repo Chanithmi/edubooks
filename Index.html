@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduBooks – Your Gateway to Knowledge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="logo">📖 Edu<span>Books</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <form class="search" id="searchForm" role="search">
+        <input type="search" id="searchInput" placeholder="Search books..." aria-label="Search books">
+        <button type="submit" aria-label="Search">🔍</button>
+      </form>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <h1>Your Gateway to Knowledge</h1>
+        <p>Discover a wide range of academic books, resources and materials to support your learning journey.</p>
+        <button class="btn" id="exploreBtn">Explore Books</button>
+      </div>
+    </section>
+
+    <section class="features container" id="about">
+      <article class="feature"><span class="icon" style="color:#2563eb">📘</span><h3>Wide Collection</h3><p>Access hundreds of books across multiple subjects.</p></article>
+      <article class="feature"><span class="icon" style="color:#16a34a">🎓</span><h3>For Students</h3><p>Find recommended books for your courses.</p></article>
+      <article class="feature"><span class="icon" style="color:#f59e0b">👥</span><h3>Easy Access</h3><p>Browse and search books quickly.</p></article>
+      <article class="feature"><span class="icon" style="color:#7c3aed">📚</span><h3>Quality Resources</h3><p>Reliable and up-to-date learning materials.</p></article>
+    </section>
+
+    <section class="container" id="books">
+      <div class="section-head">
+        <h2 id="categories">Featured Books</h2>
+        <a href="#books" class="view-all" id="viewAll">View All →</a>
+      </div>
+      <div class="book-grid" id="bookGrid">
+        <article class="book" data-title="Computer Science Essentials" data-category="Technology">
+          <img src="images/book1.png" alt="Cover of Computer Science Essentials">
+          <h3>Computer Science Essentials</h3><p class="cat">Technology</p>
+          <button class="btn-light">View Details</button>
+        </article>
+        <article class="book" data-title="Web Development Fundamentals" data-category="Computing">
+          <img src="images/book2.png" alt="Cover of Web Development Fundamentals">
+          <h3>Web Development Fundamentals</h3><p class="cat">Computing</p>
+          <button class="btn-light">View Details</button>
+        </article>
+        <article class="book" data-title="Data Science Basics" data-category="Data & Analytics">
+          <img src="images/book3.png" alt="Cover of Data Science Basics">
+          <h3>Data Science Basics</h3><p class="cat">Data &amp; Analytics</p>
+          <button class="btn-light">View Details</button>
+        </article>
+        <article class="book" data-title="Business Management" data-category="Business">
+          <img src="images/book4.png" alt="Cover of Business Management">
+          <h3>Business Management</h3><p class="cat">Business</p>
+          <button class="btn-light">View Details</button>
+        </article>
+      </div>
+      <p id="noResults" class="no-results" hidden>No books match your search.</p>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <h2>Join Our Learning Community</h2>
+      <p>Get the latest book recommendations, study tips and updates.</p>
+      <form id="newsletterForm" class="news-form" novalidate>
+        <input type="email" id="email" placeholder="Enter your email address..." aria-label="Email address">
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+      <p id="formMsg" class="form-msg" role="status"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a href="#home" class="logo">📖 Edu<span>Books</span></a>
+        <p>EduBooks is a student-focused platform providing access to quality academic books and learning resources.</p></div>
+      <div><h4>Quick Links</h4>
+        <ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#books">Books</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Follow Us</h4>
+        <div class="social"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Twitter">t</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="YouTube">▶</a></div></div>
+    </div>
+    <div class="container copyright"><span>© 2025 EduBooks. All rights reserved.</span><span><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></span></div>
+  </footer>
+
+  <dialog id="bookDialog"><h3 id="dlgTitle"></h3><p id="dlgText"></p><button class="btn" id="dlgClose">Close</button></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
